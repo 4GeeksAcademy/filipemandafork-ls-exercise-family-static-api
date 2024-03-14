@@ -1,4 +1,3 @@
-
 """
 update this file to implement the following already declared methods:
 - add_member: Should add a member to the self._members list
@@ -20,7 +19,8 @@ class FamilyStructure:
             {"id": self._generateId(),
              "age": "23 years old",
             "first_name": "Joe",
-            "last_name": "Jackson"
+            "last_name": "Jackson",
+            "lucky_number":(7,7,7)
             }
 
             ]
@@ -55,7 +55,15 @@ class FamilyStructure:
                test=elm
             return test
             
-
+    def lucky_member(self, t, newval):
+        # fill this method and update the return
+        
+        for elm in self._members:
+            if elm['id'] == t:
+               elm['lucky_numbers']=newval['lucky_number']
+          
+        return  self._members
+            
 
         
 

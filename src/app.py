@@ -64,6 +64,17 @@ def get_DELETECHAR(id):
     return jsonify(response_body), 200        
 
 
+@app.route('/members/<int:id>', methods=['PUT'])
+def get_lucky(id):
+
+    # this is how you can use the Family datastructure by calling its methods
+    request_body=request.json
+    member = jackson_family.lucky_member(id, request_body )
+    #response_body = member
+    print(member)
+
+    return jsonify(member), 200  
+
 
 # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
