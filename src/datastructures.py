@@ -39,11 +39,25 @@ class FamilyStructure:
 
     def delete_member(self, id):
         # fill this method and update the return
-        pass
+        for i, elm in enumerate(self._members):
+           if elm['id'] == id:
+            x = self._members.pop(i)
+        return self._members
+              
+            
+        
 
-    def get_member(self, id):
+    def get_member(self, t):
         # fill this method and update the return
-        pass
+
+        for elm in self._members:
+            if elm['id'] == t:
+               test=elm
+            return test
+            
+
+
+        
 
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
